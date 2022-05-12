@@ -21,22 +21,21 @@
       background-color: #fff;
       }
 
-      button {
-        margin: 2vh;
+  button {
+    margin: 2vh;
       }
 
-
-      .header {
-        padding: 2% 1%;
-        height: 12vh;
-      }
+    .header {
+      padding: 2% 1%;
+      height: 12vh;
+    }
 
       .cajita {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2% 1%;
-        height: 28vh;
+        height: 12vh;
         }
 
       .cajita > h3 {
@@ -58,6 +57,32 @@
         color:blue;
       }
 
+      #resultados {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      #resultados > div {
+        font-size: 5vh;
+      }
+
+      .indicaciones {
+        color: red;
+      }
+      .indicaciones span {
+        color: blue;
+
+      }
+      .sujetodelaoracion {
+        color: red;
+      }
+
+      .predicadodelaoracion {
+        color: blue;
+      }
+
+
+
     </style>
 
 
@@ -65,7 +90,7 @@
 
   </head>
 
-  <body onload="inicio()">
+  <body>
 
   <div class="header">
     <h1>Ejercicio sujeto y predicado</h1>
@@ -74,12 +99,33 @@
 
   <div class="principal cajita">
 
-      <h3 id="lacuestion">El sol <span>brilla en el cielo</span></h1>
+    <input type="text" class="talvez" id="talvezdos" placeholder="El sol brilla en el cielo" onkeyup="solopalabrasgracias()";></imput>
+    <br>
+    <input type="submit" class="talveztres" id="talvezcuatro" value="Distinguir Sujeto y Predicado" onclick="sujetoypredicado()"></imput>
+
+
+
+</div>
+
+<div class="secundario cajita" id="resultados">
+
+  <!--<button onclick="sujetoypredicado()">Distinguir Sujeto y Predicado</button>-->
+
+</div>
+
+<div class="secundario cajita">
+      <div class="indicaciones" style="display:none";><p>• Sujeto <span> • Predicado</span></p>
+</div>
+</div>
+
+  <!-- ejercicio #1
+  <div class="principal cajita" style=display:none>
+      <h3 id="lacuestion">El sol <span>brilla en el cielo</span></h3>
         <br>
         <div class=botonera><button onclick="sujeto()">Distinguir Sujeto</button><button onclick="predicado()">Distinguir Predicado</button></div>
+  </div>-->
 
-
-  <div class="footer cajita"></div>
+  <div class="footer"></div>
 
 
 </div>
